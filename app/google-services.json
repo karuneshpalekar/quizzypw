@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "495225154462",
+    "project_id": "quizzypw",
+    "storage_bucket": "quizzypw.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495225154462:android:4be0abc5f3920fc4cc048f",
+        "android_client_info": {
+          "package_name": "com.karunesh.quizzypw"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkGqYDT1MdxWLzZqonIrICaR9VxxyCUms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

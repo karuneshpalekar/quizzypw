@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topSectionRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingTop="@dimen/_12sdp"
+    android:background="@color/white"
+    android:paddingEnd="@dimen/_16sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- Greeting -->
+            <TextView
+                android:id="@+id/tvHello"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:fontFamily="@font/redditsans_regular"
+                android:textColor="#111111"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btnSettings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Hello Gaurav!" />
+
+            <TextView
+                android:id="@+id/tvClass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:fontFamily="@font/redditsans_semibold"
+                android:text="10th Class"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toStartOf="@id/btnSettings"
+                app:layout_constraintStart_toStartOf="@id/tvHello"
+                app:layout_constraintTop_toBottomOf="@id/tvHello" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:contentDescription="Notifications"
+                android:src="@drawable/notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Stat cards row -->
+            <LinearLayout
+                android:id="@+id/statsRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvClass">
+
+                <!-- Availability -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#F2FFF4"
+                    app:cardCornerRadius="@dimen/_14sdp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#22C55D"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/present" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:fontFamily="@font/redditsans_regular"
+                            android:text="@string/availability"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <TextView
+                            android:id="@+id/availability"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:fontFamily="@font/redditsans_bold"
+                            android:text="Present"
+                            android:textColor="#3EDB5E"
+                            android:textSize="@dimen/_12ssp"
+                            />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Quiz -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFFCF9"
+                    app:cardCornerRadius="@dimen/_14sdp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#FE9C3B"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/quiz" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:fontFamily="@font/redditsans_regular"
+                            android:text="@string/quiz"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <TextView
+                            android:id="@+id/quiz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:fontFamily="@font/redditsans_semibold"
+                            android:text="3 Attempt"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/_12ssp"
+                            />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Accuracy -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FFF6F6"
+                    app:cardCornerRadius="@dimen/_14sdp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#FF4F4F"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/target" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:fontFamily="@font/redditsans_regular"
+                            android:text="@string/accuracy"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <TextView
+                            android:id="@+id/accuracy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:fontFamily="@font/redditsans_semibold"
+                            android:text="72%"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/_12ssp"
+                            />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+            <!-- Today’s Summary -->
+            <TextView
+                android:id="@+id/tvTodaySummary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:fontFamily="@font/redditsans_bold"
+                android:text="@string/today_s_summary"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statsRow" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTodaySummary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:cardBackgroundColor="#F6F1FF"
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTodaySummary"
+                app:strokeColor="#996EB5"
+                app:strokeWidth="@dimen/_1sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_16sdp">
+
+                    <!-- Character image (replace with your drawable) -->
+                    <ImageView
+                        android:id="@+id/ivMascot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="Mascot"
+                        android:src="@drawable/summary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvFocused"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/redditsans_bold"
+                        android:gravity="center"
+                        android:text="Focused"
+                        android:textColor="#996EB5"
+                        android:textSize="@dimen/_18ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivMascot" />
+
+                    <TextView
+                        android:id="@+id/tvSummaryQuote"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/redditsans_regular"
+                        android:gravity="center"
+                        android:text="“Struggles with Apply-level Math today.”"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvFocused" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnWatch"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:fontFamily="@font/redditsans_semibold"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Watch: Apply Pythagoras Theorem"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_10ssp"
+                        app:backgroundTint="#1F1F1F"
+                        app:cornerRadius="@dimen/_6sdp"
+                        app:icon="@android:drawable/ic_media_play"
+                        app:iconGravity="textStart"
+                        app:iconPadding="@dimen/_8sdp"
+                        app:iconTint="#FFFFFF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvSummaryQuote" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Weekly Overview heading (end point for this part) -->
+            <TextView
+                android:id="@+id/tvWeeklyOverview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/redditsans_bold"
+                android:text="@string/weekly_overview"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardTodaySummary" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardWeeklyOverview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:cardElevation="@dimen/_2sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWeeklyOverview"
+                app:strokeColor="#7B7F86"
+                app:strokeWidth="@dimen/_1sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_16sdp">
+
+                    <!-- Title -->
+                    <TextView
+                        android:id="@+id/tvQuizStreakTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/redditsans_semibold"
+                        android:text="@string/quiz_streak"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toStartOf="@id/ivStreakBadge"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ivStreakBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/badge"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/line"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivStreakBadge" />
+
+                    <!-- Streak dots row -->
+                    <LinearLayout
+                        android:id="@+id/llStreakDots"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvQuizStreakTitle">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:src="@drawable/streak_done" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:src="@drawable/streak_done" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:src="@drawable/streak_done" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:src="@drawable/streak_done" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:src="@drawable/thursday" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:src="@drawable/friday" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:src="@drawable/saturday" />
+                    </LinearLayout>
+
+
+                    <!-- Target icon on right -->
+                    <ImageView
+                        android:id="@+id/ivTarget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_target"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llStreakDots" />
+
+                    <!-- Accuracy label -->
+                    <TextView
+                        android:id="@+id/tvAccuracyTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:fontFamily="@font/redditsans_semibold"
+                        android:text="@string/accuracy"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llStreakDots" />
+
+
+                    <ImageView
+                        android:id="@+id/line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/line"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivTarget" />
+
+                    <TextView
+                        android:id="@+id/tvAccuracyValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:fontFamily="@font/redditsans_semibold"
+                        android:text="68% correct"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvAccuracyTitle" />
+
+
+                    <ProgressBar
+                        android:id="@+id/progressAccuracy"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:progress="60"
+                        android:max="100"
+                        android:progressDrawable="@drawable/progress_accuracy"
+                        app:layout_constraintTop_toBottomOf="@id/tvAccuracyValue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <View
+                        android:id="@+id/div1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="#14000000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/progressAccuracy" />
+
+
+                    <TextView
+                        android:id="@+id/tvPerfTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:fontFamily="@font/redditsans_semibold"
+                        android:text="@string/performance_by_topic"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toStartOf="@id/ivBarChart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/div1" />
+
+                    <ImageView
+                        android:id="@+id/ivBarChart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/performance_chart"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvPerfTitle" />
+
+                    <ImageView
+                        android:id="@+id/line3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/line"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivBarChart" />
+
+                    <TextView
+                        android:id="@+id/tvTopic1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:fontFamily="@font/redditsans_regular"
+                        android:text="Newton's Laws Of Motion"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toStartOf="@id/ivTrend1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvPerfTitle" />
+
+                    <ImageView
+                        android:id="@+id/ivTrend1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_trend_up"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTopic1" />
+
+                    <!-- Row 2 -->
+                    <TextView
+                        android:id="@+id/tvTopic2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/redditsans_regular"
+                        android:text="Sources Of Energy"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toStartOf="@id/ivTrend2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTopic1" />
+
+                    <ImageView
+                        android:id="@+id/ivTrend2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_trend_up"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTopic2" />
+
+                    <!-- Row 3 -->
+                    <TextView
+                        android:id="@+id/tvTopic3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/redditsans_regular"
+                        android:text="Light Reflection And Refraction"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintEnd_toStartOf="@id/ivTrend3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTopic2" />
+
+                    <ImageView
+                        android:id="@+id/ivTrend3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_trend_down"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTopic3" />
+
+                    <!-- More Details button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMoreDetails"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:fontFamily="@font/redditsans_semibold"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="@string/more_details"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_10ssp"
+                        app:backgroundTint="#1F1F1F"
+                        app:cornerRadius="@dimen/_6sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTopic3"
+                        android:layout_width="match_parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

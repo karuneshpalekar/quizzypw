@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Quizzy</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="availability">Availability</string>
+    <string name="quiz">Quiz</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="today_s_summary">Today’s Summary</string>
+    <string name="weekly_overview">Weekly Overview</string>
+    <string name="quiz_streak">Quiz Streak</string>
+    <string name="performance_by_topic">Performance by Topic</string>
+    <string name="more_details">More Details</string>
+    <string name="notifications_settings"><![CDATA[Notifications & Settings]]></string>
+    <string name="notifications">Notifications</string>
+    <string name="settings">Settings</string>
+    <string name="switch_child">Switch Child</string>
+    <string name="change_active_child_profile">Change active child profile</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="logout">Logout</string>
+    <string name="sign_out_of_your_account">Sign out of your account</string>
+    <string name="let_s_get_you_signed_in">Let\'s get you Signed in</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="quizzy">Quizzy!</string>
+    <string name="sign_in">Sign in</string>
+    <string name="school_id">School ID</string>
+    <string name="student_id">Student ID</string>
+</resources>
