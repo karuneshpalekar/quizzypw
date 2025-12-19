@@ -6,7 +6,7 @@ Assignment Submission
 
 Overview
 
-Quizzy is an Android application developed as part of the given assignment to demonstrate clean architecture, modern Android practices, and scalable code structure.
+Quizzy is an Android application developed to demonstrate clean architecture, modern Android practices, and scalable code structure.
 The app displays a student dashboard including student details, quiz progress, accuracy metrics, and topic-wise performance using data fetched from a remote API.
 
 The implementation focuses on clarity, maintainability, and extensibility.
